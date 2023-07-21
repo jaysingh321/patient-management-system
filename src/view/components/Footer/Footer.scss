@@ -1,0 +1,52 @@
+.footer-container {
+  background-color: #403f79;
+  color: rgb(250, 241, 241);
+  padding-top: 2em;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+
+  .footer-column {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0.625rem;
+    padding-bottom: 1.25rem;
+
+    h4 {
+      font-size: 1.125rem;
+      font-weight: bold;
+      margin-bottom: 0.625rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.313rem;
+      }
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .support-column {
+    width: 25%;
+  }
+
+  /* Responsive layout */
+  @media screen and (max-width: 37.5rem) {
+    .footer-column {
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin-bottom: 0.938rem;
+    }
+  }
+}

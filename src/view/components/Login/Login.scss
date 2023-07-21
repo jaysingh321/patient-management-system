@@ -1,0 +1,127 @@
+.login-container {
+  position: relative;
+  .background-image {
+    position: fixed;
+    min-height: 100%;
+    min-width: 64px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-image: url(../../assets//images/Login_Bg.jpg);
+    background-size: cover;
+    opacity: 0.5;
+  }
+  .form-container {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #fff;
+    max-width: 25rem;
+    margin: 0 auto;
+    margin-top: 9.375rem;
+    .heading {
+      margin-bottom: 1.5rem;
+    }
+    input[type="submit"] {
+      width: 100%;
+      height: 3.125rem;
+      border: 0.0625rem solid;
+      background: #2991d9;
+      border-radius: 1.5625rem;
+      font-size: 1.125rem;
+      color: #e9f4fb;
+      font-weight: 700;
+      cursor: pointer;
+      outline: none;
+      margin-top: 3.4375rem;
+      &:hover {
+        border-color: #2691d9;
+        transition: 0.5s;
+      }
+    }
+    input[type="text"],
+    input[type="password"] {
+      margin-bottom: 0.625rem;
+      height: 2.5rem;
+      width: 100%;
+      padding: 0 0.3125rem;
+      border: none;
+      border-bottom: 0.0625rem solid #ccc;
+      color: #000;
+      font-size: 0.9375rem;
+      border-radius: 1.5625rem;
+      transition: border-color 0.5s;
+      &:focus {
+        outline: none;
+        border-bottom: 0.0625rem solid #2991d9;
+        transition: border-color 0.5s;
+      }
+      &::placeholder {
+        color: #505050;
+        font-size: 1rem;
+      }
+      &:focus::placeholder {
+        color: #2991d9;
+        font-weight: bold;
+      }
+      &.username,
+      &.password {
+        margin-bottom: 0.625rem;
+        height: 2.5rem;
+        width: 100%;
+        padding: 0 0.3125rem;
+        border: none;
+        border-bottom: 0.0625rem solid #ccc;
+        color: #000;
+        font-size: 0.9375rem;
+        border-radius: 1.5625rem;
+      }
+    }
+    label {
+      margin-bottom: 0.3125rem;
+      &:hover {
+        color: #2991d9;
+        cursor: pointer;
+      }
+      &.active {
+        color: #2991d9;
+      }
+      &[for="username"],
+      &[for="password"] {
+        margin-bottom: 0.625rem;
+        height: 2.5rem;
+        width: 100%;
+        padding: 0 0.3125rem;
+        border: none;
+        border-bottom: 0.0625rem solid #ccc;
+        color: #000;
+        font-size: 0.9375rem;
+        border-radius: 1.5625rem;
+      }
+    }
+    .txt_field {
+      input {
+        width: 100%;
+        margin-right: 0.5rem;
+        padding: 0 0.313rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        outline: none;
+      }
+    }
+    .pass {
+      color: #505050;
+    }
+    .Loginbutton {
+      width: 100%;
+      margin-left: 3.125rem;
+    }
+  }
+}

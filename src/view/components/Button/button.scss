@@ -1,0 +1,31 @@
+.button {
+  color: #fff;
+  border: none;
+  padding: 0.725rem 1.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  margin: 0.625rem 0.625rem 0.625rem 0.625rem;
+  font-size: 0.875rem;
+  &--primaryButton {
+    background-color: #fff;
+    color: #2b2a2a;
+    &:hover {
+      background-color: #2b2a2a;
+      color: #fff;
+    }
+  }
+  &--secondaryButton {
+    background-color: #666;
+    &:hover {
+      background-color: #2b2a2a;
+      color: #fff;
+    }
+  }
+  &--tertiaryButton {
+    background-color: rgb(209, 68, 110);
+    &:hover {
+      background-color: #f82142;
+      color: #fff;
+    }
+  }
+}

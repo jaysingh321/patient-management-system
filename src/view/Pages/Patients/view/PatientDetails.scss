@@ -1,0 +1,134 @@
+.cards-container {
+  display: flex;
+  padding: 2rem 4rem 1rem 6rem;
+  column-gap: 2.5rem;
+}
+
+.left-card {
+  flex: 1;
+
+  .flip-container {
+    perspective: 125rem;
+    height: 80%;
+    width: 80%;
+    margin: 1.25rem;
+
+    .flipper {
+      position: relative;
+      width: 100%;
+      height: 90%;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      background-color: #f2f2f2;
+      border-radius: 1.25rem;
+      margin: 1.25rem;
+      border: 0.063rem solid #ccc;
+      box-shadow: 0.625rem 0rem 1rem 0rem #191a1b;
+
+      .front,
+      .back {
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        backface-visibility: hidden;
+        background-color: #f2f2f2;
+        padding: 1.25rem;
+        border-radius: 1.25rem;
+        border: 0.063rem solid #ccc;
+        box-shadow: 0.25rem 0rem 0.5rem 0rem #191a1b;
+      }
+
+      .back {
+        transform: rotateY(180deg);
+        background-color: #f2f2f2;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+
+    &:hover .flipper {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.right-card {
+  flex: 2;
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 1.25rem;
+  border: 0.063rem solid #ccc;
+  box-shadow: 0.25rem 0rem 0.5rem 0rem #191a1b;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 21.875rem;
+  align-items: center;
+  position: static;
+
+  .edit-button {
+    display: flex;
+    position: absolute;
+    top: 13.625rem;
+    right: 4.625rem;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .main-text-style {
+    font-weight: bold;
+    color: #000;
+    font-size: 1rem;
+  }
+  .sub-text-style {
+    font-weight: 100;
+    color: #000;
+  }
+
+  .right-card-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+
+    .right-card-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    .rigt-card-sub {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+    p {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.left-card .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.625rem;
+
+  .male-color {
+    color: #36aade;
+  }
+  .female-color {
+    color: #e5017e;
+  }
+}
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  margin-top: 1rem;
+}
