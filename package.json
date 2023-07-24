@@ -10,7 +10,6 @@
     "copy-webpack-plugin": "^11.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "env-cmd": "^10.1.0",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.10.0",
@@ -29,10 +28,10 @@
   },
   "scripts": {
     "start": "concurrently \"npm run dev:frontend\" \"npm run start:backend\" \"npm run start:frontend\"",
-    "dev:frontend": "env-cmd -f .env webpack serve --config webpack.config.js --mode development",
-    "start:frontend": "env-cmd -f .env react-scripts start",
+    "dev:frontend": "webpack serve --config webpack.config.js --mode development",
+    "start:frontend": "react-scripts start",
     "start:backend": "nodemon src/core/server.js",
-    "build": "env-cmd -f .env webpack --config webpack.config.js --mode production",
+    "build": "webpack --config webpack.config.js --mode production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
