@@ -28,10 +28,11 @@
   },
   "scripts": {
     "start": "concurrently \"npm run dev:frontend\" \"npm run start:backend\" \"npm run start:frontend\"",
-    "dev:frontend": "webpack serve --config webpack.config.js --mode development",
-    "start:frontend": "react-scripts start",
+    "dev:frontend": "env-cmd -f .env webpack serve --config webpack.config.js --mode development",
+    "start:frontend": "env-cmd -f .env react-scripts start",
     "start:backend": "nodemon src/core/server.js",
-    "build": "webpack --config webpack.config.js --mode production",
+    "build": "cross-env yarn build:clean && env-cmd -f .env webpack --config webpack.config.js --mode production",
+    "build:clean": "rimraf dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -61,16 +62,19 @@
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^8.0.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
+    "env-cmd": "^10.1.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.22",
+    "rimraf": "^5.0.1",
     "sass": "^1.63.3",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
-    "webpack": "^5.0.0",
-    "webpack-cli": "^5.1.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.1"
   }
 }
