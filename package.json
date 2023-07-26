@@ -31,7 +31,7 @@
     "dev:frontend": "env-cmd -f .env webpack serve --config webpack.config.js --mode development",
     "start:frontend": "env-cmd -f .env react-scripts start",
     "start:backend": "nodemon src/core/server.js",
-    "build": "cross-env yarn build:clean && env-cmd -f .env webpack --config webpack.config.js --mode production",
+    "build": "cross-env npm run build:clean && env-cmd -f .env webpack --config webpack.config.js --mode production",
     "build:clean": "rimraf dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
